@@ -95,7 +95,7 @@ class OtpVerificationBody extends StatelessWidget {
             } else if (state is LoginPhoneComplete) {
               Navigator.of(context).pushAndRemoveUntil(
                 MaterialPageRoute(
-                  builder: (BuildContext context) =>  Home(user: state.user),
+                  builder: (BuildContext context) =>  HomeScreen(user: state.user),
                 ),
                 (route) => false,
               );

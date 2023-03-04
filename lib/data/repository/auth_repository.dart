@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth_flutter/core/exception/exception.dart';
 
 import 'package:firebase_auth_flutter/core/failure/failure.dart';
 import 'package:firebase_auth_flutter/domain/entity/user.dart';

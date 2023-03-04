@@ -8,9 +8,9 @@ import '../widgets/alert_dialog.dart';
 import '../widgets/snack_bar.dart';
 import 'pages.dart';
 
-class Home extends StatelessWidget {
-  UserEntity? user;
-  Home({super.key, this.user});
+class HomeScreen extends StatelessWidget {
+ final UserEntity? user;
+  const HomeScreen({super.key, this.user});
 
   @override
   Widget build(BuildContext context) {

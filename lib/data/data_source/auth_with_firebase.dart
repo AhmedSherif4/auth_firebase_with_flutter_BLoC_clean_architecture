@@ -114,14 +114,11 @@ class FirebaseAuthentication implements BaseAuthenticationService {
   Future<void> verifyPhone(String phoneNo) async {
     verified(AuthCredential authResult) async {
       // await mSignInCredential(authResult);
-      print('verified: $verId');
-      print('verified: $phoneNo');
+      
     }
 
     verificationFailed(FirebaseAuthException authException) {
-      print('${authException.message}');
-      print('verificationFailed: $verId');
-      print('verificationFailed: $phoneNo');
+      
 
       if (authException.code == 'invalid-phone-number') {
         throw LogInWithOTP(authException.code);
@@ -132,8 +129,7 @@ class FirebaseAuthentication implements BaseAuthenticationService {
 
     smsSent(String verificationId, int? forceResend) {
       verId = verificationId;
-      print('smsSent: $verId');
-      print('smsSent: $phoneNo');
+      
     }
 
     autoTimeout(String verificationId) {
@@ -147,17 +143,16 @@ class FirebaseAuthentication implements BaseAuthenticationService {
         verificationFailed: verificationFailed,
         codeSent: smsSent,
         codeAutoRetrievalTimeout: autoTimeout);
-    print('function: $verId');
-    print('function: $phoneNo');
+    
   }
 
   @override
   Future<void> signInAnonymously() async {
     try {
       // make variable for link with real email in the future.
+      // ignore: unused_local_variable
       final UserCredential userCredential =
           await authFirebaseInstance.signInAnonymously();
-      print("Signed in with temporary account.");
     } on FirebaseAuthException catch (e) {
       throw LogInWithAnon.fromCode(e.code);
     } catch (_) {

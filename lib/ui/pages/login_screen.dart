@@ -1,4 +1,3 @@
-import 'package:firebase_auth_flutter/ui/pages/phone_login_screen.dart';
 import 'package:firebase_auth_flutter/ui/pages/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -44,7 +43,7 @@ class LoginPage extends StatelessWidget {
           } else if (state is LoginSuccess) {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(),
+                builder: (BuildContext context) => const HomeScreen(),
               ),
             );
           } else if (state is LoginFailure) {
@@ -59,7 +58,7 @@ class LoginPage extends StatelessWidget {
           } else if (state is LoginGoogleSuccess) {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(),
+                builder: (BuildContext context) => const HomeScreen(),
               ),
             );
           } else if (state is LoginGoogleFailure) {
@@ -74,7 +73,7 @@ class LoginPage extends StatelessWidget {
           } else if (state is SignInWithAnonSuccess) {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(),
+                builder: (BuildContext context) => const HomeScreen(),
               ),
             );
           } else if (state is SignInWithAnonFailure) {
@@ -123,7 +122,7 @@ class LoginPage extends StatelessWidget {
           },
           child: const Text('Sign In Anonymously'),
         ),
-        Divider(),
+        const Divider(),
         TextButton(
           onPressed: () {
             Navigator.push(

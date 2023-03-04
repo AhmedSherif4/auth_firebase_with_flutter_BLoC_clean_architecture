@@ -40,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
           } else if (state is SignUpSuccess) {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(user: state.user),
+                builder: (BuildContext context) => HomeScreen(user: state.user),
               ),
             );
           } else if (state is SignUpFailure) {

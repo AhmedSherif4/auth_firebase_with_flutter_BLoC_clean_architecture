@@ -2,13 +2,10 @@ import 'dart:async';
 
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth_flutter/core/failure/failure.dart';
 import 'package:firebase_auth_flutter/domain/entity/user.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/dependency_injection.dart';
-import '../../../data/data_source/auth_with_firebase.dart';
 import '../../../domain/usecase/auth_usecase.dart';
 
 part 'login_event.dart';

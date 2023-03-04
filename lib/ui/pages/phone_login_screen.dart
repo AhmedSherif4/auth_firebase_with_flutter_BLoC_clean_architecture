@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/dependency_injection.dart';
-import '../widgets/alert_dialog.dart';
-import '../widgets/snack_bar.dart';
-import 'home.dart';
 
 class PhoneLoginScreen extends StatelessWidget {
   PhoneLoginScreen({super.key});
@@ -34,13 +31,9 @@ class PhoneLoginScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextField(
-            
-          ),
           Form(
             key: _formKey,
             child: TextFormField(
-
               keyboardType: TextInputType.phone,
               controller: _phone,
               decoration: InputDecoration(
